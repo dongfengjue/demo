@@ -7,6 +7,10 @@ import org.eclipse.jetty.server.handler.HandlerCollection;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
 
+/*
+* 启动servlet jetty
+*
+* */
 public class Server{
         public Server() throws Exception {
         System.out.println("Starting Server");
@@ -14,7 +18,7 @@ public class Server{
         org.eclipse.jetty.server.Server server = new org.eclipse.jetty.server.Server();
 
         SelectChannelConnector connector = new SelectChannelConnector();
-        connector.setPort(9002);
+        connector.setPort(8080);
         server.setConnectors(new Connector[] {connector});
 
         WebAppContext webappcontext = new WebAppContext();
